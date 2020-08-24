@@ -31,7 +31,6 @@ setup(
     install_requires=[
         'django>=2.2',
         'python-monkey-business>=1.0.0',
-        'six',
     ],
     description="Django admin classes that allow for nested inlines",
     author='The Atlantic',
