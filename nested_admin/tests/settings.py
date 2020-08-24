@@ -20,12 +20,11 @@ DATABASES['default']['TEST'] = dict(DATABASES['default'])
 
 SECRET_KEY = 'z-i*xqqn)r0i7leak^#clq6y5j8&tfslp^a4duaywj2$**s*0_'
 
-if django.VERSION > (2, 0):
-    MIGRATION_MODULES = {
-        'auth': None,
-        'contenttypes': None,
-        'sessions': None,
-    }
+MIGRATION_MODULES = {
+    'auth': None,
+    'contenttypes': None,
+    'sessions': None,
+}
 
 try:
     import grappelli  # noqa
