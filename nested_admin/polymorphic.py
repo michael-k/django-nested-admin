@@ -1,4 +1,3 @@
-from __future__ import absolute_import
 import json
 
 from django.conf import settings
@@ -53,7 +52,7 @@ def get_compatible_parents(model):
 
 def get_model_id(model_cls):
     opts = model_cls._meta
-    return "%s-%s" % (opts.app_label, opts.model_name)
+    return "{}-{}".format(opts.app_label, opts.model_name)
 
 
 class NestedBasePolymorphicInlineFormSet(
@@ -65,7 +64,7 @@ class NestedPolymorphicInlineAdminFormset(
         NestedInlineAdminFormsetMixin, PolymorphicInlineAdminFormSet):
 
     def inline_formset_data(self):
-        json_str = super(NestedPolymorphicInlineAdminFormset, self).inline_formset_data()
+        json_str = super().inline_formset_data()
         data = json.loads(json_str)
         if getattr(self.formset, 'fk', None):
             formset_fk_model = self.formset.fk.remote_field.model
@@ -95,7 +94,7 @@ class NestedPolymorphicInlineAdminFormset(
         return json.dumps(data)
 
 
-class NestedPolymorphicAdminFormsetHelperMixin(object):
+class NestedPolymorphicAdminFormsetHelperMixin:
 
     @staticmethod
     def inline_admin_formset_helper_cls(
