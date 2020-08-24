@@ -2,9 +2,8 @@ language: python
 
 matrix:
   include:
-    - { python: 2.7, env: TOXENV=py27-dj111 }
-    - { python: 2.7, env: TOXENV=py27-dj111-grp }
-    - { python: 3.6, env: TOXENV=py36-dj111 }
+    - { python: 3.5, env: TOXENV=py35-dj22 }
+    - { python: 3.5, env: TOXENV=py35-dj22-grp }
     - { python: 3.6, dist: xenial, env: TOXENV=py36-dj22 }
     - { python: 3.6, dist: xenial, env: TOXENV=py36-dj22-grp }
     - { python: 3.6, dist: xenial, env: TOXENV=py36-dj30 }
