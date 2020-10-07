@@ -5,7 +5,7 @@ Changelog
 
 * Fixed: polymorphic inlines don't work if nested inside non-polymorphic
   inlines. Fixes `#183`_.
-* Officially support Django 3.1
+* Officially support Python 3.9 and Django 3.1
 
 .. _#183: https://github.com/theatlantic/django-nested-admin/issues/183
 

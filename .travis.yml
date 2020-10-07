@@ -12,6 +12,7 @@ matrix:
     - { python: 3.6, dist: xenial, env: TOXENV=py36-dj31 }
     - { python: 3.7, dist: xenial, env: TOXENV=py37-dj31 }
     - { python: 3.8, dist: xenial, env: TOXENV=py38-dj31 }
+    - { python: 3.9-dev, dist: xenial, env: TOXENV=py39-dj31 }
 
 cache:
   pip: true
